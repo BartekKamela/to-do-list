@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.task__button {
+    border: none;
+}
+
+.task__button--done {
+    background-color: #008000;
+}
+
+.task__button--remove {
+    background-color: #ff0000;
+}
+
+.list__item {
+
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}

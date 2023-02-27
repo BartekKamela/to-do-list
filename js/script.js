@@ -1,11 +1,11 @@
 {
     const tasks = [
         {
-            content: "nagrać lekcję",
+            content: "test1",
             done: false,
         },
         {
-            content: "zjeść pierogi",
+            content: "test2",
             done: true,
         },
     ];
@@ -53,9 +53,9 @@
             htmlString += `
                 <li 
                     class="list__item ${task.done ? "list__item--done" : ""}">
-                    <button class="js-done">zrobione?</button>
+                    <button class="task__button task__button--done js-done">✔</button>
                     ${task.content}
-                    <button class="js-remove">usuń</button>
+                    <button class="task__button task__button--remove js-remove">&#128465;</button>
                 </li>
             `;
         }
