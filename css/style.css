@@ -11,6 +11,7 @@ body {
     word-break: break-word;
     justify-content: center;
     max-width: 900px;
+    min-width: 320px;
     margin: 0 auto;
     background-color: #ececec;
 
