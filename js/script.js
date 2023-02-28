@@ -10,6 +10,7 @@
         },
     ];
     
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
@@ -51,10 +52,14 @@
 
         for(const task of tasks) {
             htmlString += `
-                <li 
-                    class="list__item ${task.done ? "list__item--done" : ""}">
-                    <button class="task__button task__button--done js-done">✔</button>
-                    ${task.content}
+                <li>
+                    <button class="task__button task__button--done js-done">
+                        ${task.done ? "✔" : ""}
+                    </button>
+                    <span 
+                        class="list__item ${task.done ? "list__item--done" : ""}">
+                        ${task.content}
+                    </span>
                     <button class="task__button task__button--remove js-remove">&#128465;</button>
                 </li>
             `;
@@ -69,12 +74,15 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskElement = document.querySelector(".js-newTask");
 
         if(newTaskContent === "") {
+            newTaskElement.focus();
             return;
         }
 
         addNewTask(newTaskContent);
+        newTaskElement.value = "";
     };
 
     const init = () => {

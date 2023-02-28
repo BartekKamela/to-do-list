@@ -11,7 +11,11 @@ li {
 }
 
 .task__button {
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
     border: none;
+    cursor: pointer;
 }
 
 .task__button--done {
@@ -23,7 +27,7 @@ li {
 }
 
 .list__item {
-
+    margin-right: 10px;
 }
 
 .list__item--done {
