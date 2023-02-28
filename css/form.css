@@ -1,3 +1,9 @@
+.form {
+    display: grid;
+    grid-template-columns: auto 150px;
+    grid-gap: 20px;
+}
+
 .form__input {
     padding: 5px;
 }
@@ -8,3 +14,20 @@
     background-color: #008080;
     color: white;
 }
+
+@media (max-width: 767px) {
+
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+    .form__input {
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    .form__button {
+        Width: 100%;
+    }
+  }
