@@ -4,7 +4,7 @@
 * [DEMO](#DEMO)
 
 ## General Info
-My third task-project from YouCode - To Do List
+My third task-project from YouCode - To Do List \
 The project shows the possibility of creating a dynamic website using pure JS
 
 
