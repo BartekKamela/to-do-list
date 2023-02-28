@@ -1,15 +1,15 @@
 {
     const tasks = [];
-    
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
-        
+
         render();
     };
 
-    const removeTask =(index) => {
+    const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
     };
@@ -35,12 +35,12 @@
                 toggleTaskDone(index);
             });
         });
-    }; 
+    };
 
     const render = () => {
         let htmlString = "";
 
-        for(const task of tasks) {
+        for (const task of tasks) {
             htmlString += `
                 <li>
                     <button class="task__button task__button--done js-done">
@@ -66,7 +66,7 @@
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
         const newTaskElement = document.querySelector(".js-newTask");
 
-        if(newTaskContent === "") {
+        if (newTaskContent === "") {
             newTaskElement.focus();
             return;
         }
