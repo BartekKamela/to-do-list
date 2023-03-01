@@ -6,7 +6,7 @@ ul {
 
 li {
     display: grid;
-    grid-template-columns: 20px auto 40px;
+    grid-template-columns: 30px auto 30px;
     align-items: center;
     grid-gap: 20px;
     padding-top: 10px;
@@ -14,7 +14,7 @@ li {
     border-bottom: 1px solid #dadada;
 }
 
-.task__button { 
+.task__button {
     color: #ffffff;
     width: 30px;
     height: 30px;
