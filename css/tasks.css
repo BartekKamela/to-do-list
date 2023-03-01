@@ -26,8 +26,16 @@ li {
     background-color: #008000;
 }
 
+.task__button--done:hover {
+    background-color: #009400;
+}
+
 .task__button--remove {
     background-color: #ff0000;
+}
+
+.task__button--remove:hover {
+    background-color: #e00000;
 }
 
 .list__item {
