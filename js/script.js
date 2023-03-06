@@ -1,21 +1,26 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            {contet: newTaskContent, done: false},
+        ];
 
         render();
     };
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index +1),
+        ];
+
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks = tasks.map((task, index) => index === taskIndex ? { ...task, done: !task.done } : task);
         render();
     };
 
@@ -42,17 +47,17 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="task">
-                    <button class="task__button task__button--done js-done">
-                        ${task.done ? "✔" : ""}
-                    </button>
-                    <span 
-                        class="list__item ${task.done ? "list__item--done" : ""}">
-                        ${task.content}
-                    </span>
-                    <button class="task__button task__button--remove js-remove">&#128465;</button>
-                </li>
-            `;
+                    <li class="task">
+                        <button class="task__button task__button--done js-done">
+                            ${task.done ? "✔" : ""}
+                        </button>
+                        <span 
+                            class="list__item ${task.done ? "list__item--done" : ""}">
+                            ${task.content}
+                        </span>
+                        <button class="task__button task__button--remove js-remove">&#128465;</button>
+                    </li>
+                `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
