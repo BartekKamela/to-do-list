@@ -29,6 +29,7 @@
             ...task,
             done: true,
         }));
+
         render();
     };
 
@@ -83,7 +84,7 @@
 
         document.querySelector(".js-buttons").innerHTML = `
             <button class="section__headerButton">Ukryj ukończone</button>
-            <button class="section__headerButton js-RemoveEvents">Ukończ wszystkie</button>
+            <button class="section__headerButton js-RemoveEvents" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
     };
 
