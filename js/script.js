@@ -45,7 +45,7 @@
 
     };
 
-    const bindEvents = () => {
+    const bindButtonsEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -61,6 +61,17 @@
                 toggleTaskDone(index);
             });
         });
+
+        if (!tasks.length) {
+            return;
+        } else {
+            const removeTasksButton = document.querySelector(".js-RemoveEvents");
+
+            removeTasksButton.addEventListener("click", () => {
+                toggleAllTasksDone();        
+            });
+        };
+
     };
 
     const renderButtons = () => {
@@ -102,11 +113,9 @@
         renderTasks();
         renderButtons();
         
-        bindRemoveEvents();
-        bindEvents();
-        /*
+        bindRemoveEvents();       
         bindButtonsEvents();
-        */
+        
 
     };
 
