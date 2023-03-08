@@ -10,8 +10,54 @@
     background-color: white;
 }
 
+.section__header--modifier {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.section__headerTitle {
+    margin: 0px;
+    min-width: 120px;
+}
+
 .section__content {
     padding: 15px;
     border: 1px solid #dadada;
     background-color: white;
+}
+
+.section__headerButtons {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.section__headerButton {
+    color: #008080;
+    font-size: small;
+    min-width: 170px;
+    border: none;
+    cursor: pointer;
+    padding-left: 30px;
+    background-color: transparent;
+}
+
+.section__headerButton:hover {
+    color: #009393
+}
+
+@media (max-width: 500px) {
+
+    .section__header--modifier {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section__headerButtons {
+        margin-top: 15px;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
+
 }

@@ -4,7 +4,7 @@
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
-            {contet: newTaskContent, done: false},
+            { content: newTaskContent, done: false },
         ];
 
         render();
@@ -13,7 +13,7 @@
     const removeTask = (index) => {
         tasks = [
             ...tasks.slice(0, index),
-            ...tasks.slice(index +1),
+            ...tasks.slice(index + 1),
         ];
 
         render();
@@ -42,6 +42,20 @@
         });
     };
 
+    const renderButtons = () => {
+
+        if (!tasks.length) {
+            document.querySelector(".js-buttons").innerHTML = "";
+            return;
+        };
+
+        document.querySelector(".js-buttons").innerHTML = `
+            <button class="section__headerButton">Ukryj ukończone</button>
+            <button class="section__headerButton">Ukończ wszystkie</button>
+        `;
+
+    };
+
     const renderTasks = () => {
         let htmlString = "";
 
@@ -66,8 +80,10 @@
 
     const render = () => {
         renderTasks();
+        renderButtons();
 
         bindEvents();
+
     };
 
     const onFormSubmit = (event) => {
