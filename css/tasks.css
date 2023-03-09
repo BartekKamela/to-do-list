@@ -32,6 +32,8 @@ ul {
 
 .task__button--done:hover {
     background-color: #009400;
+    transition: 1s;
+    transform: scale(1.1);
 }
 
 .task__button--remove {
@@ -40,6 +42,8 @@ ul {
 
 .task__button--remove:hover {
     background-color: #e00000;
+    transition: 1s;
+    transform: scale(1.1);
 }
 
 .list__item {

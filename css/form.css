@@ -18,6 +18,8 @@
 
 .form__button:hover {
     background-color: #009c9c;
+    transition: 1s;
+    transform: scale(1.04);
 }
 
 @media (max-width: 767px) {
