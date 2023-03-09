@@ -43,7 +43,8 @@
 }
 
 .section__headerButton:hover {
-    color: #009393
+    color: #009393;
+    transition: 1s;
 }
 
 .section__headerButton:disabled {
