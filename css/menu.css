@@ -1,0 +1,34 @@
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__button {
+    color: #008080;
+    font-size: smaller;
+    border: none;
+    cursor: pointer;
+    padding-left: 30px;
+    background-color: transparent;
+    transition: 1s;
+}
+
+.menu__button:hover {
+    color: #00dfdf;
+    transition: 1s;
+}
+
+.menu__button:disabled {
+    color: #b5b5b5;
+    cursor: auto;
+}
+
+@media (max-width: 500px) {
+
+    .menu {
+        margin-top: 15px;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
+}

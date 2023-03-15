@@ -26,44 +26,10 @@
     background-color: white;
 }
 
-.section__headerButtons {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.section__headerButton {
-    color: #008080;
-    font-size: smaller;
-    border: none;
-    cursor: pointer;
-    padding-left: 30px;
-    background-color: transparent;
-    transition: 1s;
-}
-
-.section__headerButton:hover {
-    color: #00dfdf;
-    transition: 1s;
-}
-
-.section__headerButton:disabled {
-    color: #b5b5b5;
-    cursor: auto;
-}
-
-
 @media (max-width: 500px) {
 
     .section__header--modifier {
         display: flex;
         flex-direction: column;
     }
-
-    .section__headerButtons {
-        margin-top: 15px;
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
-    }
-
 }

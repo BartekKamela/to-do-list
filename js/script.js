@@ -91,8 +91,12 @@
         };
 
         document.querySelector(".js-buttons").innerHTML = `
-            <button class="section__headerButton js-HiddenTasks">${hiddenTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-            <button class="section__headerButton js-RemoveTasks" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
+            <button class="menu__button js-HiddenTasks">
+                ${hiddenTasks ? "Pokaż" : "Ukryj"} ukończone
+            </button>
+            <button class="menu__button js-RemoveTasks" 
+                ${tasks.every(({ done }) => done) ? "disabled" : ""} > Ukończ wszystkie
+            </button>
         `;
     };
 
