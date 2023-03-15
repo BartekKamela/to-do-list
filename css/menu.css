@@ -9,6 +9,7 @@
     border: none;
     cursor: pointer;
     padding-left: 30px;
+    padding-right: 20px;
     background-color: transparent;
     transition: 1s;
 }
