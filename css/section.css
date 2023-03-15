@@ -29,21 +29,20 @@
 .section__headerButtons {
     display: flex;
     justify-content: flex-end;
-
 }
 
 .section__headerButton {
     color: #008080;
-    font-size: small;
-    min-width: 170px;
+    font-size: smaller;
     border: none;
     cursor: pointer;
     padding-left: 30px;
     background-color: transparent;
+    transition: 1s;
 }
 
 .section__headerButton:hover {
-    color: #009393;
+    color: #00dfdf;
     transition: 1s;
 }
 

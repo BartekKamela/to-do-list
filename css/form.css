@@ -14,6 +14,8 @@
     background-color: #008080;
     color: white;
     cursor: pointer;
+    transition: 1s;
+    transform: scale(1);
 }
 
 .form__button:hover {
